@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "star_wars_copies",
+  "info": {
+    "singularName": "star-wars-copy",
+    "pluralName": "star-wars-copies",
+    "displayName": "star-wars-copy",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "height": {
+      "type": "decimal",
+      "default": 0
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true
+    },
+    "avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "weight": {
+      "type": "integer",
+      "default": 0,
+      "required": true
+    },
+    "hair_color": {
+      "type": "string",
+      "default": "none",
+      "required": true
+    },
+    "eye_color": {
+      "type": "string",
+      "default": "unknown",
+      "required": true
+    }
+  }
+}
